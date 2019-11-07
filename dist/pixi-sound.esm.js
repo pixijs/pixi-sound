@@ -1,7 +1,7 @@
 /*!
- * pixi-sound - v3.0.3
+ * pixi-sound - v3.0.4
  * https://github.com/pixijs/pixi-sound
- * Compiled Mon, 10 Jun 2019 16:48:20 UTC
+ * Compiled Thu, 07 Nov 2019 23:26:22 UTC
  *
  * pixi-sound is licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license

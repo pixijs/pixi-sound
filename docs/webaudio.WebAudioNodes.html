@@ -1515,66 +1515,905 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Home</h1>
+        <h1 class="page-title" data-filename="webaudio.WebAudioNodes.html">Class: WebAudioNodes</h1>
         
+
+
+<section>
+
+<header>
+  <div class="header content-size">
+      <h2>
+        
+          <span class="ancestors"><a href=webaudio.html>webaudio</a></span>.WebAudioNodes
+
+        
+      </h2>
+
+      
+      
+  </div>
+</header>
+
+<article class="content-size">
+    <div class="container-overview">
+        
+              
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="constructor">
+            <a class="share-icon" href="#constructor"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  new webaudio.WebAudioNodes
+              
+            </span>
+            <span class="signature">(audioContext)</span><span class="type-signature"></span>
+            
+            
+            
+            
+                <span class="access-signature overrides"><a href="Filterable.html#constructor">overrides</a></span>
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
 
     
 
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>audioContext</code></td>
+            
+
+            <td class="type">
+            
+                <a href="webaudio.WebAudioContext.html">webaudio.WebAudioContext</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The audio context.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+    
 
-    <section>
-        <article class="readme content-size"><h1>PixiJS Sound</h1>
-<p>WebAudio API playback library, with filters. Modern audio playback for modern browsers.</p>
-<p><a href="https://github.com/pixijs/sound/actions?query=workflow%3A%22Node.js+CI%22"><img src="https://github.com/pixijs/sound/workflows/Node.js%20CI/badge.svg" alt="Node.js CI"></a></p>
-<p><strong>Features</strong></p>
-<ul>
-<li>Pausing and resuming</li>
-<li>Independent volume control</li>
-<li>Support blocking or layered sounds (multiple instances)</li>
-<li>Support for <code>PIXI.Loader</code> system</li>
-<li>Dynamic filters:
-<ul>
-<li>ReverbFilter</li>
-<li>DistortionFilter</li>
-<li>EqualizerFilter</li>
-<li>StereoFilter</li>
-<li>TelephoneFilter</li>
-</ul>
-</li>
-</ul>
-<p><strong>Known Compatibility</strong></p>
-<ul>
-<li>Chrome 58+</li>
-<li>Firefox 49+</li>
-<li>Safari 10+</li>
-<li>iOS 9+</li>
-<li>IE 9+</li>
-</ul>
-<h2>Usage</h2>
-<p>Installation is available by <a href="https://npmjs.org">NPM</a>:</p>
-<pre><code class="hljs language-bash">npm i @pixi/sound --save
-</code></pre>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { sound } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/sound&#x27;</span>;
+    
 
-sound.add(<span class="hljs-string">&#x27;my-sound&#x27;</span>, <span class="hljs-string">&#x27;path/to/file.mp3&#x27;</span>);
-sound.play(<span class="hljs-string">&#x27;my-sound&#x27;</span>);
-</code></pre>
-<h3>Resources</h3>
-<ul>
-<li><a href="https://github.com/pixijs/sound/releases">Releases</a></li>
-<li><a href="https://pixijs.io/sound/examples/index.html">Basics</a></li>
-<li><a href="https://pixijs.io/sound/examples/sprites.html">Sprites</a></li>
-<li><a href="https://pixijs.io/sound/examples/filters.html">Filters</a></li>
-<li><a href="https://pixijs.io/sound/examples/demo.html">Demo</a></li>
-<li><a href="https://pixijs.io/sound/docs/index.html">API Documentation</a></li>
-</ul>
-<h2>License</h2>
-<p>MIT License.</p>
-</article>
+    
+
+    
+
+    
+
+    
+</dd>
+
+            
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        <ul>
+          
+
+            <li><a href=Filterable.html>Filterable</a></li>
+          
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="BUFFER_SIZE">
+            <a class="share-icon" href="#BUFFER_SIZE"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">webaudio.WebAudioNodes.BUFFER_SIZE</span>
+            <span class="type-signature type">number</span>
+            
+            <span class="access-signature">static</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The buffer size for script processor, default is <code>0</code> which auto-detects. If you plan to use
+script node on iOS, you'll need to provide a non-zero amount.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="analyser">
+            <a class="share-icon" href="#analyser"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">analyser</span>
+            <span class="type-signature type">AnalyserNode</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get the analyser node</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="bufferSize">
+            <a class="share-icon" href="#bufferSize"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">bufferSize</span>
+            <span class="type-signature type">number</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get buffer size of <code>ScriptProcessorNode</code>.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="bufferSource">
+            <a class="share-icon" href="#bufferSource"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">bufferSource</span>
+            <span class="type-signature type">AudioBufferSourceNode</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get the buffer source node</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="context">
+            <a class="share-icon" href="#context"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">context</span>
+            <span class="type-signature type"><a href=webaudio.WebAudioContext.html>webaudio.WebAudioContext</a></span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Reference to the SoundContext</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="gain">
+            <a class="share-icon" href="#gain"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">gain</span>
+            <span class="type-signature type">GainNode</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get the gain node</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="script">
+            <a class="share-icon" href="#script"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">script</span>
+            <span class="type-signature type">ScriptProcessorNode</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get the script processor node.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="cloneBufferSource">
+            <a class="share-icon" href="#cloneBufferSource"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  cloneBufferSource
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> <a href="SourceClone.html">SourceClone</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Clones the bufferSource. Used just before playing a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="SourceClone.html">SourceClone</a>
+            
+            </td>
+            <td class="description last">The clone AudioBufferSourceNode.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destroy">
+            <a class="share-icon" href="#destroy"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  destroy
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+                <span class="access-signature overrides"><a href="Filterable.html#destroy">overrides</a></span>
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Cleans up.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+        <div>
+    <h3 class="subsection-title">Inherited Properties</h3>
+
+    
+        
+
+<div class="panel collapsible-group-container">
+    <section class="panel-heading collapsible-group-header">
+        <a class="btn" role="button" data-toggle="collapse" href="#13">
+            <img src="icons/chevron-down.svg" />
+        </a>
+        <h4>From class <a href="Filterable.html">Filterable</a></h4>
     </section>
+    <section class="panel-collapse collapse in" id="13">
+        <section class="panel-body collapsible-group-body">
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destination">
+            <a class="share-icon" href="#destination"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">destination</span>
+            <span class="type-signature"></span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="Filterable.html#destination">inherited</a></span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>The destination output audio node</p></p>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="filters">
+            <a class="share-icon" href="#filters"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">filters</span>
+            <span class="type-signature type">Array&lt;<a href=filters.Filter.html>filters.Filter</a>&gt;</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="Filterable.html#filters">inherited</a></span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The collection of filters</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+            
+        </section>
+    </section>
+</div>
+
+    
+</div>
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

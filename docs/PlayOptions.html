@@ -1515,66 +1515,887 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Home</h1>
+        <h1 class="page-title" data-filename="PlayOptions.html">Interface: PlayOptions</h1>
         
+
+
+<section>
+
+<header>
+  <div class="header content-size">
+      <h2>
+        PlayOptions
+
+        
+      </h2>
+
+      
+          <div class="class-description"><p>Options used for sound playback.</p></div>
+      
+      
+  </div>
+</header>
+
+<article class="content-size">
+    <div class="container-overview">
+        
+
+        
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        
+        <dl>
+
+<table class="properties">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        
+          <th>Type</th>
+        
+
+        
+        
+            <th>Default</th>
+        
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>complete</code></td>
+            
+
+            
+                <td class="type">
+                
+                    Function
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>When completed.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>end</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>End time in seconds.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>loaded</code></td>
+            
+
+            
+                <td class="type">
+                
+                    Function
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>If not already preloaded, callback when finishes load.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>loop</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Override default loop, default to the Sound's loop setting.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>muted</code></td>
+            
+
+            
+                <td class="type">
+                
+                    boolean
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>If sound instance is muted by default.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>speed</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Override default speed, default to the Sound's speed setting.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>sprite</code></td>
+            
+
+            
+                <td class="type">
+                
+                    string
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>The sprite to play.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>start</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Start time offset in seconds.</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>volume</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Override default volume, default to the Sound's volume setting.</p>
+
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+</dl>
+    
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+        
+    </div>
 
-    <section>
-        <article class="readme content-size"><h1>PixiJS Sound</h1>
-<p>WebAudio API playback library, with filters. Modern audio playback for modern browsers.</p>
-<p><a href="https://github.com/pixijs/sound/actions?query=workflow%3A%22Node.js+CI%22"><img src="https://github.com/pixijs/sound/workflows/Node.js%20CI/badge.svg" alt="Node.js CI"></a></p>
-<p><strong>Features</strong></p>
-<ul>
-<li>Pausing and resuming</li>
-<li>Independent volume control</li>
-<li>Support blocking or layered sounds (multiple instances)</li>
-<li>Support for <code>PIXI.Loader</code> system</li>
-<li>Dynamic filters:
-<ul>
-<li>ReverbFilter</li>
-<li>DistortionFilter</li>
-<li>EqualizerFilter</li>
-<li>StereoFilter</li>
-<li>TelephoneFilter</li>
-</ul>
-</li>
-</ul>
-<p><strong>Known Compatibility</strong></p>
-<ul>
-<li>Chrome 58+</li>
-<li>Firefox 49+</li>
-<li>Safari 10+</li>
-<li>iOS 9+</li>
-<li>IE 9+</li>
-</ul>
-<h2>Usage</h2>
-<p>Installation is available by <a href="https://npmjs.org">NPM</a>:</p>
-<pre><code class="hljs language-bash">npm i @pixi/sound --save
-</code></pre>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { sound } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/sound&#x27;</span>;
+    
 
-sound.add(<span class="hljs-string">&#x27;my-sound&#x27;</span>, <span class="hljs-string">&#x27;path/to/file.mp3&#x27;</span>);
-sound.play(<span class="hljs-string">&#x27;my-sound&#x27;</span>);
-</code></pre>
-<h3>Resources</h3>
-<ul>
-<li><a href="https://github.com/pixijs/sound/releases">Releases</a></li>
-<li><a href="https://pixijs.io/sound/examples/index.html">Basics</a></li>
-<li><a href="https://pixijs.io/sound/examples/sprites.html">Sprites</a></li>
-<li><a href="https://pixijs.io/sound/examples/filters.html">Filters</a></li>
-<li><a href="https://pixijs.io/sound/examples/demo.html">Demo</a></li>
-<li><a href="https://pixijs.io/sound/docs/index.html">API Documentation</a></li>
-</ul>
-<h2>License</h2>
-<p>MIT License.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="complete">
+            <a class="share-icon" href="#complete"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">complete</span>
+            <span class="type-signature type">Function</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>When completed.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="end">
+            <a class="share-icon" href="#end"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">end</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>End time in seconds.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="loaded">
+            <a class="share-icon" href="#loaded"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">loaded</span>
+            <span class="type-signature type">Function</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>If not already preloaded, callback when finishes load.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="loop">
+            <a class="share-icon" href="#loop"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">loop</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Override default loop, default to the Sound's loop setting.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="muted">
+            <a class="share-icon" href="#muted"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">muted</span>
+            <span class="type-signature type">boolean</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>If sound instance is muted by default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="speed">
+            <a class="share-icon" href="#speed"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">speed</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Override default speed, default to the Sound's speed setting.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="sprite">
+            <a class="share-icon" href="#sprite"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">sprite</span>
+            <span class="type-signature type">string</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The sprite to play.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="start">
+            <a class="share-icon" href="#start"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">start</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Start time offset in seconds.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="volume">
+            <a class="share-icon" href="#volume"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">volume</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Override default volume, default to the Sound's volume setting.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 </article>
-    </section>
 
-
+</section>
 
 
 

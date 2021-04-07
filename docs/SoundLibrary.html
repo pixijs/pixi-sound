@@ -1515,66 +1515,3813 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Home</h1>
+        <h1 class="page-title" data-filename="SoundLibrary.html">Class: SoundLibrary</h1>
         
+
+
+<section>
+
+<header>
+  <div class="header content-size">
+      <h2>
+        SoundLibrary
+
+        
+      </h2>
+
+      
+      
+          <div class="class-description"><p>Manages the playback of sounds. This is the main class for PixiJS Sound. If you're
+using the browser-based bundled this is <code>PIXI.sound</code>. Otherwise, you can do this:</p></div>
+      
+  </div>
+</header>
+
+<article class="content-size">
+    <div class="container-overview">
+        
+        
+
+        
+<dl class="details">
+    
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+        
+            <h3>Example</h3>
+            
+    <pre class="prettyprint"><code>
+ import { sound } from '@pixi/sound';
 
-    <section>
-        <article class="readme content-size"><h1>PixiJS Sound</h1>
-<p>WebAudio API playback library, with filters. Modern audio playback for modern browsers.</p>
-<p><a href="https://github.com/pixijs/sound/actions?query=workflow%3A%22Node.js+CI%22"><img src="https://github.com/pixijs/sound/workflows/Node.js%20CI/badge.svg" alt="Node.js CI"></a></p>
-<p><strong>Features</strong></p>
-<ul>
-<li>Pausing and resuming</li>
-<li>Independent volume control</li>
-<li>Support blocking or layered sounds (multiple instances)</li>
-<li>Support for <code>PIXI.Loader</code> system</li>
-<li>Dynamic filters:
-<ul>
-<li>ReverbFilter</li>
-<li>DistortionFilter</li>
-<li>EqualizerFilter</li>
-<li>StereoFilter</li>
-<li>TelephoneFilter</li>
-</ul>
-</li>
-</ul>
-<p><strong>Known Compatibility</strong></p>
-<ul>
-<li>Chrome 58+</li>
-<li>Firefox 49+</li>
-<li>Safari 10+</li>
-<li>iOS 9+</li>
-<li>IE 9+</li>
-</ul>
-<h2>Usage</h2>
-<p>Installation is available by <a href="https://npmjs.org">NPM</a>:</p>
-<pre><code class="hljs language-bash">npm i @pixi/sound --save
-</code></pre>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { sound } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/sound&#x27;</span>;
+ // sound is an instance of SoundLibrary
+ sound.add('my-sound', 'path/to/file.mp3');
+ sound.play('my-sound');</code></pre>
 
-sound.add(<span class="hljs-string">&#x27;my-sound&#x27;</span>, <span class="hljs-string">&#x27;path/to/file.mp3&#x27;</span>);
-sound.play(<span class="hljs-string">&#x27;my-sound&#x27;</span>);
-</code></pre>
-<h3>Resources</h3>
-<ul>
-<li><a href="https://github.com/pixijs/sound/releases">Releases</a></li>
-<li><a href="https://pixijs.io/sound/examples/index.html">Basics</a></li>
-<li><a href="https://pixijs.io/sound/examples/sprites.html">Sprites</a></li>
-<li><a href="https://pixijs.io/sound/examples/filters.html">Filters</a></li>
-<li><a href="https://pixijs.io/sound/examples/demo.html">Demo</a></li>
-<li><a href="https://pixijs.io/sound/docs/index.html">API Documentation</a></li>
-</ul>
-<h2>License</h2>
-<p>MIT License.</p>
+        
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="context">
+            <a class="share-icon" href="#context"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">context</span>
+            <span class="type-signature type"><a href=IMediaContext.html>IMediaContext</a></span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The global context to use.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="filtersAll">
+            <a class="share-icon" href="#filtersAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">filtersAll</span>
+            <span class="type-signature type">Array&lt;<a href=filters.Filter.html>filters.Filter</a>&gt;</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Apply filters to all sounds. Can be useful
+for setting global planning or global effects.
+<strong>Only supported with WebAudio.</strong></p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>
+ import { sound, filters } from '@pixi/sound';
+ // Adds a filter to pan all output left
+ sound.filtersAll = [
+     new filters.StereoFilter(-1)
+ ];</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="speedAll">
+            <a class="share-icon" href="#speedAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">speedAll</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the global speed for all sounds. To set per-sound speed see <a href="SoundLibrary.html#speed">SoundLibrary#speed</a>.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="supported">
+            <a class="share-icon" href="#supported"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">supported</span>
+            <span class="type-signature type">boolean</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p><code>true</code> if WebAudio is supported on the current browser.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="useLegacy">
+            <a class="share-icon" href="#useLegacy"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">useLegacy</span>
+            <span class="type-signature type">boolean</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Do not use WebAudio, force the use of legacy. This <strong>must</strong> be called before loading any files.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="volumeAll">
+            <a class="share-icon" href="#volumeAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">volumeAll</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the global volume for all sounds. To set per-sound volume see <a href="SoundLibrary.html#volume">SoundLibrary#volume</a>.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="add">
+            <a class="share-icon" href="#add"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  add
+              
+            </span>
+            <span class="signature">(alias, sound)</span><span class="type-signature"> <a href="Sound.html">Sound</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Register an existing sound with the library cache.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>sound</code></td>
+            
+
+            <td class="type">
+            
+                <a href="Sound.html">Sound</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Sound reference to use.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="Sound.html">Sound</a>
+            
+            </td>
+            <td class="description last">Instance of the Sound object.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="add">
+            <a class="share-icon" href="#add"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  add
+              
+            </span>
+            <span class="signature">(alias, options)</span><span class="type-signature"> <a href="Sound.html">Sound</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds a new sound by alias.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                ArrayBuffer | String | <a href="Options.html">Options</a> | HTMLAudioElement
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Either the path or url to the source file.
+or the object of options to use.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="Sound.html">Sound</a>
+            
+            </td>
+            <td class="description last">Instance of the Sound object.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="add">
+            <a class="share-icon" href="#add"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  add
+              
+            </span>
+            <span class="signature">(map, globalOptions)</span><span class="type-signature"> SoundMap</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds multiple sounds at once.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>map</code></td>
+            
+
+            <td class="type">
+            
+                SoundSourceMap
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Map of sounds to add, the key is the alias, the value is the
+<code>string</code>, <code>ArrayBuffer</code>, <code>HTMLAudioElement</code> or the list of options
+(see <a href=Options.html>Options</a> for full options).</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>globalOptions</code></td>
+            
+
+            <td class="type">
+            
+                <a href="Options.html">Options</a>
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>The default options for all sounds.
+if a property is defined, it will use the local property instead.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    SoundMap
+            
+            </td>
+            <td class="description last">Instance to the Sound object.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="close">
+            <a class="share-icon" href="#close"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  close
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Closes the sound library. This will release/destroy
+the AudioContext(s). Can be used safely if you want to
+initialize the sound library later. Use <code>init</code> method.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last"></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="duration">
+            <a class="share-icon" href="#duration"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  duration
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> number</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get the length of a sound in seconds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    number
+            
+            </td>
+            <td class="description last">The current duration in seconds.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="exists">
+            <a class="share-icon" href="#exists"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  exists
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> boolean</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if a sound by alias exists.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Check for alias.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    boolean
+            
+            </td>
+            <td class="description last">true if the sound exists.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="find">
+            <a class="share-icon" href="#find"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  find
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> <a href="Sound.html">Sound</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Find a sound by alias.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="Sound.html">Sound</a>
+            
+            </td>
+            <td class="description last">Sound object.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="init">
+            <a class="share-icon" href="#init"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  init
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Re-initialize the sound library, this will
+recreate the AudioContext. If there's a hardware-failure
+call <code>close</code> and then <code>init</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Sound instance</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="muteAll">
+            <a class="share-icon" href="#muteAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  muteAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Mutes all playing sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="pause">
+            <a class="share-icon" href="#pause"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  pause
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> <a href="Sound.html">Sound</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Pauses a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="Sound.html">Sound</a>
+            
+            </td>
+            <td class="description last">Sound object.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="pauseAll">
+            <a class="share-icon" href="#pauseAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  pauseAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Pauses any playing sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="play">
+            <a class="share-icon" href="#play"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  play
+              
+            </span>
+            <span class="signature">(alias, sprite)</span><span class="type-signature"> <a href="IMediaInstance.html">IMediaInstance</a> | unknown</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Plays a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>sprite</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The alias of the sprite to play.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="IMediaInstance.html">IMediaInstance</a> | unknown
+            
+            </td>
+            <td class="description last">The sound instance, this cannot be reused
+after it is done playing. Returns <code>null</code> if the sound has not yet loaded.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="play">
+            <a class="share-icon" href="#play"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  play
+              
+            </span>
+            <span class="signature">(alias, options)</span><span class="type-signature"> <a href="IMediaInstance.html">IMediaInstance</a> | Promise</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Plays a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                <a href="PlayOptions.html">PlayOptions</a> | Function
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>The options or callback when done.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="IMediaInstance.html">IMediaInstance</a> | Promise
+            
+            </td>
+            <td class="description last">The sound instance,
+this cannot be reused after it is done playing. Returns a Promise if the sound
+has not yet loaded.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="remove">
+            <a class="share-icon" href="#remove"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  remove
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Removes a sound by alias.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="removeAll">
+            <a class="share-icon" href="#removeAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  removeAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Stops and removes all sounds. They cannot be used after this.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resume">
+            <a class="share-icon" href="#resume"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  resume
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> <a href="Sound.html">Sound</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Resumes a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="Sound.html">Sound</a>
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resumeAll">
+            <a class="share-icon" href="#resumeAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  resumeAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Resumes any sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="speed">
+            <a class="share-icon" href="#speed"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  speed
+              
+            </span>
+            <span class="signature">(alias, speed)</span><span class="type-signature"> number</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get or set the speed for a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>speed</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Optional current speed to set.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    number
+            
+            </td>
+            <td class="description last">The current speed.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="stop">
+            <a class="share-icon" href="#stop"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  stop
+              
+            </span>
+            <span class="signature">(alias)</span><span class="type-signature"> <a href="Sound.html">Sound</a></span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Stops a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    <a href="Sound.html">Sound</a>
+            
+            </td>
+            <td class="description last">Sound object.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="stopAll">
+            <a class="share-icon" href="#stopAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  stopAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Stops all sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="toggleMuteAll">
+            <a class="share-icon" href="#toggleMuteAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  toggleMuteAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> boolean</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Toggle muted property for all sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    boolean
+            
+            </td>
+            <td class="description last"><code>true</code> if all sounds are muted.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="togglePauseAll">
+            <a class="share-icon" href="#togglePauseAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  togglePauseAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> boolean</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Toggle paused property for all sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    boolean
+            
+            </td>
+            <td class="description last"><code>true</code> if all sounds are paused.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="unmuteAll">
+            <a class="share-icon" href="#unmuteAll"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  unmuteAll
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> this</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Unmutes all playing sounds.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    this
+            
+            </td>
+            <td class="description last">Instance for chaining.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="volume">
+            <a class="share-icon" href="#volume"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  volume
+              
+            </span>
+            <span class="signature">(alias, volume)</span><span class="type-signature"> number</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get or set the volume for a sound.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alias</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>The sound alias reference.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>volume</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Optional current volume to set.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    number
+            
+            </td>
+            <td class="description last">The current volume.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+
+    
 </article>
-    </section>
 
-
+</section>
 
 
 

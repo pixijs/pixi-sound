@@ -1515,66 +1515,904 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Home</h1>
+        <h1 class="page-title" data-filename="webaudio.WebAudioMedia.html">Class: WebAudioMedia</h1>
         
+
+
+<section>
+
+<header>
+  <div class="header content-size">
+      <h2>
+        
+          <span class="ancestors"><a href=webaudio.html>webaudio</a></span>.WebAudioMedia
+
+        
+      </h2>
+
+      
+      
+          <div class="class-description"><p>Represents a single sound element. Can be used to play, pause, etc. sound instances.</p></div>
+      
+  </div>
+</header>
+
+<article class="content-size">
+    <div class="container-overview">
+        
+        
+
+        
+<dl class="details">
+    
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+        
+    </div>
 
-    <section>
-        <article class="readme content-size"><h1>PixiJS Sound</h1>
-<p>WebAudio API playback library, with filters. Modern audio playback for modern browsers.</p>
-<p><a href="https://github.com/pixijs/sound/actions?query=workflow%3A%22Node.js+CI%22"><img src="https://github.com/pixijs/sound/workflows/Node.js%20CI/badge.svg" alt="Node.js CI"></a></p>
-<p><strong>Features</strong></p>
-<ul>
-<li>Pausing and resuming</li>
-<li>Independent volume control</li>
-<li>Support blocking or layered sounds (multiple instances)</li>
-<li>Support for <code>PIXI.Loader</code> system</li>
-<li>Dynamic filters:
-<ul>
-<li>ReverbFilter</li>
-<li>DistortionFilter</li>
-<li>EqualizerFilter</li>
-<li>StereoFilter</li>
-<li>TelephoneFilter</li>
-</ul>
-</li>
-</ul>
-<p><strong>Known Compatibility</strong></p>
-<ul>
-<li>Chrome 58+</li>
-<li>Firefox 49+</li>
-<li>Safari 10+</li>
-<li>iOS 9+</li>
-<li>IE 9+</li>
-</ul>
-<h2>Usage</h2>
-<p>Installation is available by <a href="https://npmjs.org">NPM</a>:</p>
-<pre><code class="hljs language-bash">npm i @pixi/sound --save
-</code></pre>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { sound } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/sound&#x27;</span>;
+    
 
-sound.add(<span class="hljs-string">&#x27;my-sound&#x27;</span>, <span class="hljs-string">&#x27;path/to/file.mp3&#x27;</span>);
-sound.play(<span class="hljs-string">&#x27;my-sound&#x27;</span>);
-</code></pre>
-<h3>Resources</h3>
-<ul>
-<li><a href="https://github.com/pixijs/sound/releases">Releases</a></li>
-<li><a href="https://pixijs.io/sound/examples/index.html">Basics</a></li>
-<li><a href="https://pixijs.io/sound/examples/sprites.html">Sprites</a></li>
-<li><a href="https://pixijs.io/sound/examples/filters.html">Filters</a></li>
-<li><a href="https://pixijs.io/sound/examples/demo.html">Demo</a></li>
-<li><a href="https://pixijs.io/sound/docs/index.html">API Documentation</a></li>
+    
+        <h3 class="subsection-title">Implements</h3>
+
+        <ul>
+          
+
+            <li><a href=IMedia.html>IMedia</a></li>
+          
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="buffer">
+            <a class="share-icon" href="#buffer"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">buffer</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Gets and sets the buffer.</p></p>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="context">
+            <a class="share-icon" href="#context"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">context</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="filters">
+            <a class="share-icon" href="#filters"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">filters</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="nodes">
+            <a class="share-icon" href="#nodes"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">nodes</span>
+            <span class="type-signature type"><a href=webaudio.WebAudioNodes.html>webaudio.WebAudioNodes</a></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get the current chained nodes object</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="parent">
+            <a class="share-icon" href="#parent"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">parent</span>
+            <span class="type-signature type"><a href=Sound.html>Sound</a></span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Reference to the parent Sound container.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="source">
+            <a class="share-icon" href="#source"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">source</span>
+            <span class="type-signature type">ArrayBuffer</span>
+            
+            <span class="access-signature">readonly</span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The file buffer to load.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="_decode">
+            <a class="share-icon" href="#_decode"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  _decode
+              
+            </span>
+            <span class="signature">(arrayBuffer, callback)</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Decodes the array buffer.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arrayBuffer</code></td>
+            
+
+            <td class="type">
+            
+                ArrayBuffer
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>From load.</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                Function
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <p>Callback optional</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="_loadUrl">
+            <a class="share-icon" href="#_loadUrl"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  _loadUrl
+              
+            </span>
+            <span class="signature">(callback)</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Loads a sound using XHMLHttpRequest object.</p></p>
+    
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                LoadedCallback
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destroy">
+            <a class="share-icon" href="#destroy"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  destroy
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Destructor, safer to use <code>SoundLibrary.remove(alias)</code> to remove this sound.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="init">
+            <a class="share-icon" href="#init"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  init
+              
+            </span>
+            <span class="signature">(parent)</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Re-initialize without constructing.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                <a href="Sound.html">Sound</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <ul>
+<li>Instance of parent Sound container</li>
 </ul>
-<h2>License</h2>
-<p>MIT License.</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+
+    
 </article>
-    </section>
 
-
+</section>
 
 
 

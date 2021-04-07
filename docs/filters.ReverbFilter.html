@@ -1515,66 +1515,1291 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Home</h1>
+        <h1 class="page-title" data-filename="filters.ReverbFilter.html">Class: ReverbFilter</h1>
         
+
+
+<section>
+
+<header>
+  <div class="header content-size">
+      <h2>
+        
+          <span class="ancestors"><a href=filters.html>filters</a></span>.ReverbFilter
+
+        
+      </h2>
+
+      
+      
+          <div class="class-description"><p>Filter for adding reverb. Refactored from
+https://github.com/web-audio-components/simple-reverb/</p></div>
+      
+  </div>
+</header>
+
+<article class="content-size">
+    <div class="container-overview">
+        
+              
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="constructor">
+            <a class="share-icon" href="#constructor"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  new filters.ReverbFilter
+              
+            </span>
+            <span class="signature">(seconds, decay, reverse)</span><span class="type-signature"></span>
+            
+            
+            
+            
+                <span class="access-signature overrides"><a href="filters.Filter.html#constructor">overrides</a></span>
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
 
     
 
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>seconds</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Seconds for reverb</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>decay</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The decay length</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>reverse</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Reverse reverb</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+    
 
-    <section>
-        <article class="readme content-size"><h1>PixiJS Sound</h1>
-<p>WebAudio API playback library, with filters. Modern audio playback for modern browsers.</p>
-<p><a href="https://github.com/pixijs/sound/actions?query=workflow%3A%22Node.js+CI%22"><img src="https://github.com/pixijs/sound/workflows/Node.js%20CI/badge.svg" alt="Node.js CI"></a></p>
-<p><strong>Features</strong></p>
-<ul>
-<li>Pausing and resuming</li>
-<li>Independent volume control</li>
-<li>Support blocking or layered sounds (multiple instances)</li>
-<li>Support for <code>PIXI.Loader</code> system</li>
-<li>Dynamic filters:
-<ul>
-<li>ReverbFilter</li>
-<li>DistortionFilter</li>
-<li>EqualizerFilter</li>
-<li>StereoFilter</li>
-<li>TelephoneFilter</li>
-</ul>
-</li>
-</ul>
-<p><strong>Known Compatibility</strong></p>
-<ul>
-<li>Chrome 58+</li>
-<li>Firefox 49+</li>
-<li>Safari 10+</li>
-<li>iOS 9+</li>
-<li>IE 9+</li>
-</ul>
-<h2>Usage</h2>
-<p>Installation is available by <a href="https://npmjs.org">NPM</a>:</p>
-<pre><code class="hljs language-bash">npm i @pixi/sound --save
-</code></pre>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { sound } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/sound&#x27;</span>;
+    
 
-sound.add(<span class="hljs-string">&#x27;my-sound&#x27;</span>, <span class="hljs-string">&#x27;path/to/file.mp3&#x27;</span>);
-sound.play(<span class="hljs-string">&#x27;my-sound&#x27;</span>);
-</code></pre>
-<h3>Resources</h3>
-<ul>
-<li><a href="https://github.com/pixijs/sound/releases">Releases</a></li>
-<li><a href="https://pixijs.io/sound/examples/index.html">Basics</a></li>
-<li><a href="https://pixijs.io/sound/examples/sprites.html">Sprites</a></li>
-<li><a href="https://pixijs.io/sound/examples/filters.html">Filters</a></li>
-<li><a href="https://pixijs.io/sound/examples/demo.html">Demo</a></li>
-<li><a href="https://pixijs.io/sound/docs/index.html">API Documentation</a></li>
-</ul>
-<h2>License</h2>
-<p>MIT License.</p>
-</article>
+    
+
+    
+
+    
+
+    
+</dd>
+
+            
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        <ul>
+          
+
+            <li><a href=filters.Filter.html>filters.Filter</a></li>
+          
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="decay">
+            <a class="share-icon" href="#decay"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">decay</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Decay value from 0 to 100</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>2</li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="reverse">
+            <a class="share-icon" href="#reverse"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">reverse</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Reverse value from 0 to 1</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="seconds">
+            <a class="share-icon" href="#seconds"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">seconds</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Length of reverb in seconds from 1 to 50</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>3</li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="_clamp">
+            <a class="share-icon" href="#_clamp"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  _clamp
+              
+            </span>
+            <span class="signature">(value, min, max)</span><span class="type-signature"> number</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Clamp a value</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>min</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Minimum value</p>
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>Maximum value</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    number
+            
+            </td>
+            <td class="description last">Clamped number</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="_rebuild">
+            <a class="share-icon" href="#_rebuild"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  _rebuild
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Utility function for building an impulse response
+from the module parameters.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+        <div>
+    <h3 class="subsection-title">Inherited Properties</h3>
+
+    
+        
+
+<div class="panel collapsible-group-container">
+    <section class="panel-heading collapsible-group-header">
+        <a class="btn" role="button" data-toggle="collapse" href="#6">
+            <img src="icons/chevron-down.svg" />
+        </a>
+        <h4>From class <a href="filters.Filter.html">filters.Filter</a></h4>
     </section>
+    <section class="panel-collapse collapse in" id="6">
+        <section class="panel-body collapsible-group-body">
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destination">
+            <a class="share-icon" href="#destination"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">destination</span>
+            <span class="type-signature type">AudioNode</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="filters.Filter.html#destination">inherited</a></span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>The node to connect for the filter to the previous filter.</p></p>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="source">
+            <a class="share-icon" href="#source"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">source</span>
+            <span class="type-signature type">AudioNode</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="filters.Filter.html#source">inherited</a></span>
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>The node to connect for the filter to the previous filter.</p></p>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+            
+        </section>
+    </section>
+</div>
+
+    
+</div>
+
+    
+
+    
+        <div>
+    <h3 class="subsection-title">Inherited Methods</h3>
+
+    
+        
+
+<div class="panel collapsible-group-container">
+    <section class="panel-heading collapsible-group-header">
+        <a class="btn" role="button" data-toggle="collapse" href="#7">
+            <img src="icons/chevron-down.svg" />
+        </a>
+        <h4>From class <a href="filters.Filter.html">filters.Filter</a></h4>
+    </section>
+    <section class="panel-collapse collapse in" id="7">
+        <section class="panel-body collapsible-group-body">
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="connect">
+            <a class="share-icon" href="#connect"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  connect
+              
+            </span>
+            <span class="signature">(destination)</span><span class="type-signature"> void</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="filters.Filter.html#connect">inherited</a></span>
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Connect to the destination.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>destination</code></td>
+            
+
+            <td class="type">
+            
+                AudioNode
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The destination node to connect the output to</p>
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destroy">
+            <a class="share-icon" href="#destroy"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  destroy
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="filters.Filter.html#destroy">inherited</a></span>
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Destroy the filter and don't use after this.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="disconnect">
+            <a class="share-icon" href="#disconnect"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  disconnect
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="filters.Filter.html#disconnect">inherited</a></span>
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Completely disconnect filter from destination and source nodes.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="init">
+            <a class="share-icon" href="#init"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  init
+              
+            </span>
+            <span class="signature">(destination, source)</span><span class="type-signature"> void</span>
+            
+            
+            
+                <span class="access-signature inherited"><a href="filters.Filter.html#init">inherited</a></span>
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Reinitialize</p></p>
+    
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+            <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>destination</code></td>
+            
+
+            <td class="type">
+            
+                AudioNode
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+
+            <td class="type">
+            
+                AudioNode
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+            
+        </section>
+    </section>
+</div>
+
+    
+</div>
+
+    
+
+    
+</article>
+
+</section>
 
 
 

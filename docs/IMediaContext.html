@@ -1515,66 +1515,1021 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Home</h1>
+        <h1 class="page-title" data-filename="IMediaContext.html">Interface: IMediaContext</h1>
         
+
+
+<section>
+
+<header>
+  <div class="header content-size">
+      <h2>
+        IMediaContext
+
+        
+      </h2>
+
+      
+      
+          <div class="class-description"><p>Represents the audio context for playing back sounds. This can
+represent either an HTML or WebAudio context.</p></div>
+      
+  </div>
+</header>
+
+<article class="content-size">
+    <div class="container-overview">
+        
+
+        
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        
+        <dl>
+
+<table class="properties">
+    <thead>
+    <tr>
+        
+            <th>Name</th>
+        
+
+        
+          <th>Type</th>
+        
+
+        
+        
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>audioContext</code></td>
+            
+
+            
+                <td class="type">
+                
+                </td>
+            
+
+            
+
+            
+
+            
+
+            <td class="description last">
+                
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>filters</code></td>
+            
+
+            
+                <td class="type">
+                
+                    Array&lt;Filter&gt;
+                
+                </td>
+            
+
+            
+
+            
+
+            
+
+            <td class="description last">
+                <p>Collection of global filter</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>muted</code></td>
+            
+
+            
+                <td class="type">
+                
+                    boolean
+                
+                </td>
+            
+
+            
+
+            
+
+            
+
+            <td class="description last">
+                <p><code>true</code> if all sounds are mute</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>paused</code></td>
+            
+
+            
+                <td class="type">
+                
+                    boolean
+                
+                </td>
+            
+
+            
+
+            
+
+            
+
+            <td class="description last">
+                <p>Set the paused state for all sound</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>speed</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+
+            
+
+            <td class="description last">
+                <p>The speed of all sound</p>
+
+                
+            </td>
+        </tr>
+    
+
+        <tr>
+            
+                <td class="name"><code>volume</code></td>
+            
+
+            
+                <td class="type">
+                
+                    number
+                
+                </td>
+            
+
+            
+
+            
+
+            
+
+            <td class="description last">
+                <p>Volume to apply to all sound</p>
+
+                
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+</dl>
+    
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+        
+    </div>
 
-    <section>
-        <article class="readme content-size"><h1>PixiJS Sound</h1>
-<p>WebAudio API playback library, with filters. Modern audio playback for modern browsers.</p>
-<p><a href="https://github.com/pixijs/sound/actions?query=workflow%3A%22Node.js+CI%22"><img src="https://github.com/pixijs/sound/workflows/Node.js%20CI/badge.svg" alt="Node.js CI"></a></p>
-<p><strong>Features</strong></p>
-<ul>
-<li>Pausing and resuming</li>
-<li>Independent volume control</li>
-<li>Support blocking or layered sounds (multiple instances)</li>
-<li>Support for <code>PIXI.Loader</code> system</li>
-<li>Dynamic filters:
-<ul>
-<li>ReverbFilter</li>
-<li>DistortionFilter</li>
-<li>EqualizerFilter</li>
-<li>StereoFilter</li>
-<li>TelephoneFilter</li>
-</ul>
-</li>
-</ul>
-<p><strong>Known Compatibility</strong></p>
-<ul>
-<li>Chrome 58+</li>
-<li>Firefox 49+</li>
-<li>Safari 10+</li>
-<li>iOS 9+</li>
-<li>IE 9+</li>
-</ul>
-<h2>Usage</h2>
-<p>Installation is available by <a href="https://npmjs.org">NPM</a>:</p>
-<pre><code class="hljs language-bash">npm i @pixi/sound --save
-</code></pre>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { sound } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/sound&#x27;</span>;
+    
 
-sound.add(<span class="hljs-string">&#x27;my-sound&#x27;</span>, <span class="hljs-string">&#x27;path/to/file.mp3&#x27;</span>);
-sound.play(<span class="hljs-string">&#x27;my-sound&#x27;</span>);
-</code></pre>
-<h3>Resources</h3>
-<ul>
-<li><a href="https://github.com/pixijs/sound/releases">Releases</a></li>
-<li><a href="https://pixijs.io/sound/examples/index.html">Basics</a></li>
-<li><a href="https://pixijs.io/sound/examples/sprites.html">Sprites</a></li>
-<li><a href="https://pixijs.io/sound/examples/filters.html">Filters</a></li>
-<li><a href="https://pixijs.io/sound/examples/demo.html">Demo</a></li>
-<li><a href="https://pixijs.io/sound/docs/index.html">API Documentation</a></li>
-</ul>
-<h2>License</h2>
-<p>MIT License.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="audioContext">
+            <a class="share-icon" href="#audioContext"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">audioContext</span>
+            <span class="type-signature"></span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Reference to the Web Audio API AudioContext element, if Web Audio is available</p></p>
+    
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="filters">
+            <a class="share-icon" href="#filters"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">filters</span>
+            <span class="type-signature type">Array&lt;Filter&gt;</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Collection of global filter</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="muted">
+            <a class="share-icon" href="#muted"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">muted</span>
+            <span class="type-signature type">boolean</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p><code>true</code> if all sounds are mute</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="paused">
+            <a class="share-icon" href="#paused"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">paused</span>
+            <span class="type-signature type">boolean</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the paused state for all sound</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="speed">
+            <a class="share-icon" href="#speed"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">speed</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The speed of all sound</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="volume">
+            <a class="share-icon" href="#volume"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">volume</span>
+            <span class="type-signature type">number</span>
+            
+            
+            
+            
+        </h4>
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Volume to apply to all sound</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destroy">
+            <a class="share-icon" href="#destroy"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  destroy
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Destroy the context and don't use after this.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="refresh">
+            <a class="share-icon" href="#refresh"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  refresh
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Dispatch event to refresh all instances volume, mute, etc.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="refreshPaused">
+            <a class="share-icon" href="#refreshPaused"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  refreshPaused
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Dispatches event to refresh the paused state of playing instances.</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="toggleMute">
+            <a class="share-icon" href="#toggleMute"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  toggleMute
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> boolean</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Toggle mute for all sounds</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    boolean
+            
+            </td>
+            <td class="description last"></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="togglePause">
+            <a class="share-icon" href="#togglePause"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  togglePause
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> boolean</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+      <p class="description"><p>Toggle pause for all sounds</p></p>
+    
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+      <h5>Returns:</h5>
+      
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                    boolean
+            
+            </td>
+            <td class="description last"></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+    
+
+    
+
+    
+
+    
+
+    
 </article>
-    </section>
 
-
+</section>
 
 
 

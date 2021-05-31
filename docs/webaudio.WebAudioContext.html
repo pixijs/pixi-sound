@@ -404,11 +404,11 @@
             
                 <li class="parent  " data-name="filters.EqualizerFilter.getGain"><a href=filters.EqualizerFilter.html#getGain>getGain</a></li>
             
+                <li class="  " data-name="filters.EqualizerFilter.init"><a href=filters.EqualizerFilter.html#init>init</a></li>
+            
                 <li class="parent  " data-name="filters.EqualizerFilter.reset"><a href=filters.EqualizerFilter.html#reset>reset</a></li>
             
                 <li class="parent  " data-name="filters.EqualizerFilter.setGain"><a href=filters.EqualizerFilter.html#setGain>setGain</a></li>
-            
-                <li class="  " data-name="filters.EqualizerFilter.init"><a href=filters.EqualizerFilter.html#init>init</a></li>
             
             </ul>
             
@@ -560,6 +560,10 @@
             <ul class="methods itemMembers">
             
             <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="filters.ReverbFilter._clamp"><a href=filters.ReverbFilter.html#_clamp>_clamp</a></li>
+            
+                <li class="parent  " data-name="filters.ReverbFilter._rebuild"><a href=filters.ReverbFilter.html#_rebuild>_rebuild</a></li>
             
                 <li class="  " data-name="filters.ReverbFilter.connect"><a href=filters.ReverbFilter.html#connect>connect</a></li>
             
@@ -1233,6 +1237,8 @@
             
             <span class="subtitle">Methods</span>
             
+                <li class="parent  " data-name="webaudio.WebAudioContext._unlock"><a href=webaudio.WebAudioContext.html#_unlock>_unlock</a></li>
+            
                 <li class="parent  " data-name="webaudio.WebAudioContext.decode"><a href=webaudio.WebAudioContext.html#decode>decode</a></li>
             
                 <li class="parent  " data-name="webaudio.WebAudioContext.destroy"><a href=webaudio.WebAudioContext.html#destroy>destroy</a></li>
@@ -1300,7 +1306,19 @@
             
             <span class="subtitle">Methods</span>
             
+                <li class="parent  " data-name="webaudio.WebAudioInstance._internalStop"><a href=webaudio.WebAudioInstance.html#_internalStop>_internalStop</a></li>
+            
+                <li class="parent  " data-name="webaudio.WebAudioInstance._now"><a href=webaudio.WebAudioInstance.html#_now>_now</a></li>
+            
+                <li class="parent  " data-name="webaudio.WebAudioInstance._onComplete"><a href=webaudio.WebAudioInstance.html#_onComplete>_onComplete</a></li>
+            
+                <li class="parent  " data-name="webaudio.WebAudioInstance._update"><a href=webaudio.WebAudioInstance.html#_update>_update</a></li>
+            
+                <li class="parent  " data-name="webaudio.WebAudioInstance._updateListener"><a href=webaudio.WebAudioInstance.html#_updateListener>_updateListener</a></li>
+            
                 <li class="parent  " data-name="webaudio.WebAudioInstance.destroy"><a href=webaudio.WebAudioInstance.html#destroy>destroy</a></li>
+            
+                <li class="parent  " data-name="webaudio.WebAudioInstance.enableTicker"><a href=webaudio.WebAudioInstance.html#enableTicker>enableTicker</a></li>
             
                 <li class="parent  " data-name="webaudio.WebAudioInstance.init"><a href=webaudio.WebAudioInstance.html#init>init</a></li>
             
@@ -1376,6 +1394,10 @@
             <ul class="methods itemMembers">
             
             <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="webaudio.WebAudioMedia._decode"><a href=webaudio.WebAudioMedia.html#_decode>_decode</a></li>
+            
+                <li class="parent  " data-name="webaudio.WebAudioMedia._loadUrl"><a href=webaudio.WebAudioMedia.html#_loadUrl>_loadUrl</a></li>
             
                 <li class="parent  " data-name="webaudio.WebAudioMedia.destroy"><a href=webaudio.WebAudioMedia.html#destroy>destroy</a></li>
             
@@ -2185,6 +2207,85 @@ time used to compute progress isn't messed up.</p>
             
 <dt>
     <div class="nameContainer">
+        <h4 class="name" id="_unlock">
+            <a class="share-icon" href="#_unlock"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+              
+                  _unlock
+              
+            </span>
+            <span class="signature">()</span><span class="type-signature"> void</span>
+            
+            
+            
+            
+        </h4>
+
+        
+    </div>
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Try to unlock audio on iOS. This is triggered from either WebAudio plugin setup (which will work if inside of
+a <code>mousedown</code> or <code>touchend</code> event stack), or the first document touchend/mousedown event. If it fails (touchend
+will fail if the user presses for too long, indicating a scroll event instead of a click event.</p>
+<p>Note that earlier versions of iOS supported <code>touchstart</code> for this, but iOS9 removed this functionality. Adding
+a <code>touchstart</code> event to support older platforms may preclude a <code>mousedown</code> even from getting fired on iOS9, so we
+stick with <code>mousedown</code> and <code>touchend</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
         <h4 class="name" id="decode">
             <a class="share-icon" href="#decode"><span class="glyphicon glyphicon-link"></span></a>
             <span class="">
@@ -2975,7 +3076,7 @@ require the first sound to be played inside of a user initiated event (touch/cli
 
         <footer class="content-size">
             <div class="footer">
-                Documentation generated by <a href="https://github.com/webdoc-js/webdoc">Webdoc 1</a> on Mon May 03 2021 12:12:51 GMT-0700 (Pacific Daylight Time)
+                Documentation generated by <a href="https://github.com/webdoc-js/webdoc">Webdoc 1</a> on Mon May 31 2021 13:06:17 GMT-0700 (Pacific Daylight Time)
             </div>
         </footer>
     </div>
